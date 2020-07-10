@@ -2,31 +2,17 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
+import style from "./header.module.scss"
+import Logo from "../images/lightwizard-logo.png"
+
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+  <header>
+    {/* <Link to="/">
+      <Image src={Logo} alt="Light Wizard Logo" fluid/>
+    </Link> */}
+    <div className={style.greetings}>
+      Hi, we are <div className={style.siteName}>{siteTitle}</div>.
+      <span> vienna based light installation artists </span>
     </div>
   </header>
 )

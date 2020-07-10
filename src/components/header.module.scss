@@ -1,0 +1,28 @@
+header {
+  display: flex;
+  justify-content: flex-end;
+  height: 70px;
+  padding: 1.4em;
+  a {
+    width: 130px;
+  }
+  .greetings {
+    font-family: "Gotham-Thin", sans-serif;
+    font-size: 20px;
+    line-height: 1.5em;
+    letter-spacing: 1px;
+    * {
+      display: inline-block;
+    }
+    span {
+      display: block;
+    }
+  }
+  .siteName {
+    font-family: 'Gotham-Black', sans-serif;
+    font-size: 36px;
+    letter-spacing: initial;
+    text-transform: uppercase;
+
+  }
+}

@@ -1,0 +1,15 @@
+body {
+  background-color: #000;
+  color: #fff;
+}
+a, p {
+  font-family: "Gotham-Thin", sans-serif;
+  line-height: 1.5em;
+  letter-spacing: 1px;
+}
+a {
+  &.active,
+  &:hover {
+    color: #59d256;
+  }
+}

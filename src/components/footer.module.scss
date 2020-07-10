@@ -1,0 +1,23 @@
+footer {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  bottom: 0;
+  ul {
+    list-style: none;
+    padding: 0;
+    li {
+      font-family: "Gotham-Light";
+      a {
+        color: #fff;
+        text-decoration: none;
+        &:hover {
+          text-decoration: none;
+
+          // font-family: "Gotham-Bold";
+        }
+      }
+    }
+  }
+}
