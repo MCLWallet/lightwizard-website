@@ -1,24 +1,53 @@
 import React from "react"
-import {Link} from "gatsby"
+import {Link, useStaticQuery, graphql} from "gatsby"
 
 import style from "./footer.module.scss"
 
-const Footer = () => (
-  <footer>
+export default function Footer() {
+  const data = useStaticQuery(graphql`
+    query IconQuery {
+      allIcons {
+        edges {
+          node {
+            facebook {
+              css
+              standard
+              markup
+            }
+            instagram {
+              css
+              standard
+              markup
+            }
+            mail {
+              css
+              standard
+              markup
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  return (
+    <footer>
       <ul style={{paddingLeft: `1em`}}>
         <li>
-          <a href="https://www.facebook.com/lightwizardvienna" target="_blank">facebook</a>
+          <a href="https://www.facebook.com/lightwizardvienna" 
+            target="_blank"
+            dangerouslySetInnerHTML={{__html: data.allIcons.edges[0].node.facebook[0].markup}}>
+          </a>
         </li>
         <li>
-          <a href="https://www.instagram.com/light_wizard_vienna/" target="_blank">instagram</a>
-        </li>
-        {/* TODO: Pinterest public board? */}
-        <li>
-          <a href="#">pinterest</a>
+          <a href="https://www.instagram.com/light_wizard_vienna/" 
+            target="_blank"
+            dangerouslySetInnerHTML={{__html: data.allIcons.edges[0].node.instagram[0].markup}}></a>
         </li>
         {/* TODO: get new domain */}
         <li>
-          <a href="#">mail</a>
+          <a href="#"
+          dangerouslySetInnerHTML={{__html: data.allIcons.edges[0].node.mail[0].markup}}></a>
         </li>
       </ul>
       <ul style={{paddingRight:`1em`, textAlign: `right`}}>
@@ -35,7 +64,9 @@ const Footer = () => (
           <Link to = "/contact" activeClassName="active"> contact </Link>
         </li>
       </ul>
-  </footer>
-)
-
-export default Footer
+      <style dangerouslySetInnerHTML={{__html: data.allIcons.edges[0].node.facebook[0].css}}/>
+      <style dangerouslySetInnerHTML={{__html: data.allIcons.edges[0].node.instagram[0].css}}/>
+      <style dangerouslySetInnerHTML={{__html: data.allIcons.edges[0].node.mail[0].css}}/>
+    </footer>
+  )
+}
