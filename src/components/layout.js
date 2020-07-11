@@ -11,6 +11,8 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Footer from "./footer"
+import BackgroundVideo from "../components/backgroundVideo"
+
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -26,10 +28,10 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div>
-        <main>{children}</main>
+      <BackgroundVideo cloudName="dxx5qncnr"/>
+
+      <main>{children}</main>
         
-      </div>
       <Footer/>
     </>
   )

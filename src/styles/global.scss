@@ -1,9 +1,11 @@
+$light-bg: rgba(119, 116, 116, 0.29);
+
 body {
   background-color: #000;
   color: #fff;
 }
 a, p {
-  font-family: "Gotham-Thin", sans-serif;
+  font-family: "Gotham-Light", sans-serif;
   line-height: 1.5em;
   letter-spacing: 1px;
 }
@@ -19,4 +21,9 @@ video {
   position: fixed;
   object-fit: cover;
   z-index: 0;
+}
+main {
+  position: absolute;
+  padding-top: 132px;
+  width: 100%;
 }

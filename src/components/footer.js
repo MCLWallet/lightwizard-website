@@ -5,7 +5,7 @@ import style from "./footer.module.scss"
 
 const Footer = () => (
   <footer>
-      <ul>
+      <ul style={{paddingLeft: `1em`}}>
         <li>
           <a href="https://www.facebook.com/lightwizardvienna" target="_blank">facebook</a>
         </li>
@@ -21,7 +21,7 @@ const Footer = () => (
           <a href="#">mail</a>
         </li>
       </ul>
-      <ul>
+      <ul style={{paddingRight:`1em`, textAlign: `right`}}>
         <li>
           <Link to="/" activeClassName="active">home</Link>
         </li>
