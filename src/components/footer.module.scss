@@ -1,22 +1,30 @@
 footer {
   position: absolute;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   bottom: 0;
   ul {
     list-style: none;
     padding: 0;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 25% 25% 25% 25%;
     li {
-      font-size: 16px;
+      font-size: 36px;
+      text-align: left;
+      margin: 0 0.8em;
       a {
         color: #fff;
         text-decoration: none;
-        transition: .2s;
+        transition: .4s ease-out;
+        border-left: 2px solid;
+        // border-right: 2px solid;
+        padding: 0 0.7em;
         &:hover {
           text-decoration: none;
-
-          // font-family: "Gotham-Bold";
+          padding: 0 0.3em;
         }
       }
     }

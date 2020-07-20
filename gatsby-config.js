@@ -39,13 +39,6 @@ module.exports = {
       }
     },
     {
-      resolve: "gatsby-source-custom-api",
-      options: {
-        url: "https://css.gg/json",
-        rootKey: "icons"
-      }
-    },
-    {
       resolve: `gatsby-plugin-layout`,
       options: {
         component: require.resolve(`./src/components/layout.js`)
