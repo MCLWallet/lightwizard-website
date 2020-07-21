@@ -1,7 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import { propTypes } from "react-bootstrap/esm/Image"
 
 const BackgroundVideo = ({ cloudName, publicID }) => (
   <div className="videoWrapper" dangerouslySetInnerHTML={{__html:`

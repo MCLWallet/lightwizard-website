@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "antd": "^4.4.3",
     "bootstrap": "^4.5.0",
     "cloudinary-react": "^1.6.1",
     "dotenv": "^8.2.0",

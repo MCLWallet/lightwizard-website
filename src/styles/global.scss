@@ -1,8 +1,14 @@
 $light-bg: rgba(119, 116, 116, 0.29);
+$global-margin-x: 0.8em;
 
 body {
   background-color: #000;
   color: #fff;
+}
+h1 {
+  font-family: "Gotham-Thin", sans-serif;
+  line-height: 1.5em;
+  letter-spacing: 1px;
 }
 a, p {
   font-family: "Gotham-Light", sans-serif;
@@ -12,7 +18,7 @@ a, p {
 a {
   &.active,
   &:hover {
-    color: #59d256;
+    color: #41b33f;
   }
 }
 video {

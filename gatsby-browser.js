@@ -5,6 +5,7 @@
  */
 
 // You can delete this file if you're not using it
+import "antd/dist/antd.css"
 import "./src/styles/normalize.css"
 import "./src/styles/global.scss"
 import "./src/styles/fonts.css"

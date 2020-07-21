@@ -35,7 +35,8 @@ module.exports = {
       options: {
         cloudName: process.env.CLOUDINARY_CLOUD_NAME,
         apiKey: process.env.CLOUDINARY_API_KEY,
-        apiSecret: process.env.CLOUDINARY_API_SECRET
+        apiSecret: process.env.CLOUDINARY_API_SECRET,
+        tags: true
       }
     },
     {
@@ -43,7 +44,6 @@ module.exports = {
       options: {
         component: require.resolve(`./src/components/layout.js`)
       }
-      
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

@@ -1,9 +1,7 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
 import style from "./header.module.scss"
-import Logo from "../images/lightwizard-logo.png"
 
 const Header = ({ siteTitle }) => (
   <header>
