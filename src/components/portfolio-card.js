@@ -1,11 +1,13 @@
 import React from "react"
 import {Card} from "antd"
 
-const PortfolioCard = ({cardTitle, imgSrc}) => {
+import Image from "gatsby-image"
+
+const PortfolioCard = ({cardTitle, imgSrcSet}) => {
   
   return (
     <Card title={cardTitle}
-          cover={<img alt="example" src={imgSrc} />}
+          cover={<Image fluid={imgSrcSet} alt="banner" />}
           />
   )
 

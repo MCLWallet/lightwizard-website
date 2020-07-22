@@ -9,7 +9,8 @@ import KfpPlexi from "../portfolio-items/kfp-plexi"
 const Portfolio = () => (
   <>
     <SEO title="Portfolio" />
-    <Row justify="center" gutter={[16,16]}>
+    
+    <Row justify="center" gutter={[16,16]} style={{margin: 0}}>
       <Col md={11} xs={23}>
         <KfpPlexi />
       </Col>

@@ -5,20 +5,25 @@ import PortfolioCard from "../components/portfolio-card"
 
 const KfpPlexi = ( ) => {
   const data = useStaticQuery(graphql`
-    query ImageQuery {
-      allCloudinaryMedia(filter: {tags: {eq: "kfp_plexi_thumbnail"}}) {
+    query MyQuery {
+      allFile(filter: {relativeDirectory: {eq: "portfolio/kfp-plexi"}}) {
         edges {
           node {
-            secure_url
+            childCloudinaryAsset {
+              fluid {
+                ...CloudinaryAssetFluid
+              }
+            }
           }
         }
       }
     }
   `)
-  const thumbnailImages = data.allCloudinaryMedia.edges
+
+  const images = data.allFile.edges
   
   return (
-    <PortfolioCard cardTitle="Kultur For President" imgSrc={thumbnailImages[0].node.secure_url}/>
+    <PortfolioCard cardTitle="Kultur For President" imgSrcSet={images[0].node.childCloudinaryAsset.fluid}/>
   )
 
 }
