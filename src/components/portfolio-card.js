@@ -6,9 +6,11 @@ import Image from "gatsby-image"
 const PortfolioCard = ({cardTitle, imgSrcSet}) => {
   
   return (
-    <Card title={cardTitle}
-          cover={<Image fluid={imgSrcSet} alt="banner" />}
-          />
+    <a className="portfolio-card" href="#">
+      <h1 style={{color: '#fff'}}>{cardTitle}</h1>
+      <Image fluid={imgSrcSet}/>
+
+    </a>
   )
 
 }
