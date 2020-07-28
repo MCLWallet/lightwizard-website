@@ -1,10 +1,9 @@
 $light-bg: rgba(119, 116, 116, 0.29);
 $global-margin-x: 0.8em;
 
-body {
-  background-color: #000;
-  color: #fff;
-}
+$body-bg: #000;
+$body-color: #fff;
+
 h1 {
   font-family: "Gotham-Thin", sans-serif;
   line-height: 1.5em;
@@ -41,3 +40,5 @@ footer {
     }
   }
 }
+
+@import "~bootstrap/scss/bootstrap";

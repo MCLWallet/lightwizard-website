@@ -23,7 +23,7 @@ const KfpPlexi = ( ) => {
   const images = data.allFile.edges
   
   return (
-    <PortfolioCard cardTitle="Kultur For President" imgSrcSet={images[0].node.childCloudinaryAsset.fluid}/>
+    <PortfolioCard cardTitle="Kultur For President" imgSrcSet={images}/>
   )
 
 }

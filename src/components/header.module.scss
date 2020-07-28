@@ -10,9 +10,10 @@ header {
     width: 130px;
   }
   .greetings {
+    text-align: right;
     font-family: "Gotham-Thin", sans-serif;
     font-size: 20px;
-    margin: 0 1em;
+    margin: 1em 1em 0;
     line-height: 1.5em;
     letter-spacing: 1px;
     * {

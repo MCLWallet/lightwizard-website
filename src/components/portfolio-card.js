@@ -2,15 +2,31 @@ import React from "react"
 import {Card} from "antd"
 
 import Image from "gatsby-image"
+import Carousel from "react-bootstrap/Carousel"
+
+import portfolioCardStyles from "./portfolio-card.module.scss"
 
 const PortfolioCard = ({cardTitle, imgSrcSet}) => {
   
   return (
-    <a className="portfolio-card" href="#">
-      <h1 style={{color: '#fff'}}>{cardTitle}</h1>
-      <Image fluid={imgSrcSet}/>
+    <div className={portfolioCardStyles.carouselContainer}>
+      <Carousel controls={false}>
+        <Carousel.Item>
+          <Image fluid={imgSrcSet[0].node.childCloudinaryAsset.fluid}/>
+        </Carousel.Item>
+        <Carousel.Item>
+          <Image fluid={imgSrcSet[1].node.childCloudinaryAsset.fluid}/>
+        </Carousel.Item>
+        <Carousel.Item>
+          <Image fluid={imgSrcSet[2].node.childCloudinaryAsset.fluid}/>
+        </Carousel.Item>
+      </Carousel>
+      <h1>
+              {cardTitle}
 
-    </a>
+            </h1>
+    </div>
+    
   )
 
 }
