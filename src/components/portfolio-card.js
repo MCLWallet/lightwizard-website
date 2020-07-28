@@ -5,6 +5,7 @@ import Image from "gatsby-image"
 import Carousel from "react-bootstrap/Carousel"
 
 import portfolioCardStyles from "./portfolio-card.module.scss"
+// TODO: Fix fixed height problem
 
 const PortfolioCard = ({cardTitle, imgSrcSet}) => {
   
