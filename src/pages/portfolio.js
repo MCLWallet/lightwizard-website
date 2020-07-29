@@ -17,6 +17,12 @@ const Portfolio = () => (
       <Col md={11} xs={23}>
         <KfpPlexi />
       </Col>
+      <Col md={11} xs={23}>
+        <KfpPlexi />
+      </Col>
+      <Col md={11} xs={23}>
+        <KfpPlexi />
+      </Col>
 
     </Row>
     
